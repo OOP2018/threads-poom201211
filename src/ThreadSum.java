@@ -1,13 +1,24 @@
 public class ThreadSum {
     public static void main(String[] args) {
         // upper limit of numbers to add/subtract to Counter
-        final int LIMIT = 10000000;
+        final int LIMIT = 1000000;
         // The counter that accumulates a total.
         Counter counter1 = new Counter();
         Counter counter2 = new CounterWithLock();
+        Counter counter3 = new SynchronousCounter();
+        Counter counter4 = new AtomicCounter();
+
+        System.out.println("Testing normal method");
         runThreads(counter1, LIMIT);
-        System.out.println("--------------------------------");
+        System.out.println("-------------------------------------");
+        System.out.println("Testing lock method");
         runThreads(counter2, LIMIT);
+        System.out.println("-------------------------------------");
+        System.out.println("Testing synchronized method");
+        runThreads(counter3, LIMIT);
+        System.out.println("-------------------------------------");
+        System.out.println("Testing atomic method");
+        runThreads(counter4, LIMIT);
     }
 
     public static void runThreads(Counter counter, final int limit) {
