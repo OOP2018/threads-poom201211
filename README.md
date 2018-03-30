@@ -26,19 +26,21 @@ The threads use the counter to add and subtract values.
 
 answer the questions (1.1 - 1.3)
 
-(1.1) No, the total is not always the same. To explain is that
-      there are two cores processing. For example, the first core
-      is assigned to thread 1 in the program and the second to
-      thread 2. Thread 1 send a message to counter to add(number) and
-      counter then sends a signal to the "load memory" to add(number).
-      After, it saves this information to the cache. Thread 2 also has
-      to go through the same but is not aware of Thread 1 also performing.
-      Concluding, the two thread are using the same counter procedure,
-      which makes them work asynchronously.
+(1.1)  No, the total is not always the same. To explain is that
+            there are two cores processing. For example, the first core
+            is assigned to thread 1 in the program and the second to
+            thread 2. Thread 1 send a message to counter to add(number) and
+            counter then sends a signal to the "load memory" to add(number).
+            After, it saves this information to the cache. Thread 2 also has
+            to go through the same but is not aware of Thread 1 also performing.
+            Concluding, the two thread are using the same counter procedure,
+            which makes them work asynchronously.
 
-(1.2) First try  --> time = 0.017359
-      Second try --> time = 0.018404
-      Third try  --> time = 0.013114
+(1.2)  First try  --> time = 0.017359
+
+         Second try --> time = 0.018404
+
+             Third try  --> time = 0.013114
 
 (1.3) same as question 1.1
 
@@ -52,20 +54,22 @@ working at the same time but unaware of one another.
 
 answer questions 3.1 - 3.4
 
-(3.1) First try  --> time = 0.234239
-      Second try --> time = 0.248832
-      Third try  --> time = 0.238264
+(3.1)  First try  --> time = 0.234239
 
-(3.2) The results are not equal to zero and also different to problem one
-      due to the Lock class. Since there is a ReentrantLock method for the
-      Thread to wait for each other but is still accessing the same counter.4
-      The threads are still not using working on the same total value, therefore
-      still adding and subtracting values separately.
+         Second try --> time = 0.248832
+
+             Third try  --> time = 0.238264
+
+(3.2)  The results are not equal to zero and also different to problem one
+            due to the Lock class. Since there is a ReentrantLock method for the
+            Thread to wait for each other but is still accessing the same counter.4
+            The threads are still not using working on the same total value, therefore
+            still adding and subtracting values separately.
 
 
 ## 4. Counter with synchronized method
 
-answer question 4 - 
+answer question 4 -
 
 ## 5. Counter with AtomicLong
 
