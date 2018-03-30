@@ -38,9 +38,9 @@ answer the questions (1.1 - 1.3)
 
 (1.2)  First try  --> time = 0.017359
 
-         Second try --> time = 0.018404
+       Second try --> time = 0.018404
 
-             Third try  --> time = 0.013114
+       Third try  --> time = 0.013114
 
 (1.3) same as question 1.1
 
@@ -56,9 +56,9 @@ answer questions 3.1 - 3.4
 
 (3.1)  First try  --> time = 0.234239
 
-         Second try --> time = 0.248832
+       Second try --> time = 0.248832
 
-             Third try  --> time = 0.238264
+       Third try  --> time = 0.238264
 
 (3.2)  The results are not equal to zero and also different to problem one
             due to the Lock class. Since there is a ReentrantLock method for the
